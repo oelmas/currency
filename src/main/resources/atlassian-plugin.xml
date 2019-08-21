@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="currency"/>  
+  <!-- add our web resources -->  
+  <customfield-type name="Currency CF Type" i18n-name-key="currency-cf-type.name" key="currency-cf-type" class="com.icterra.jira.plugins.currency.CurrencyCFType">
+    <description key="currency-cf-type.description">The Currency CF Type Plugin</description>  
+    <resource name="view" type="velocity" location="/templates/customfields/currency-cf-type/view.vm"/>  
+    <resource name="edit" type="velocity" location="/templates/customfields/currency-cf-type/edit.vm"/> 
+  </customfield-type>
+</atlassian-plugin>

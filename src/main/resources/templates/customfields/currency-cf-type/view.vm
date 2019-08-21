@@ -1,0 +1,4 @@
+## The string 'currency' makes format() treat the value as a currency
+#if ($value)
+    $!numberTool.format('currency', $value)
+#end
